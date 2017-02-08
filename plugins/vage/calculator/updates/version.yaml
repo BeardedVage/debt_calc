@@ -1,0 +1,35 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.3:
+    - 'Created table vage_calculator_month'
+    - builder_table_create_vage_calculator_month.php
+1.0.7:
+    - 'Updated table vage_calculator_month'
+    - builder_table_update_vage_calculator_month.php
+1.0.8:
+    - 'Drop table vage_calculator_month'
+    - builder_table_delete_vage_calculator_month.php
+1.0.9:
+    - 'Created table vage_calculator_payments'
+    - builder_table_create_vage_calculator_payments.php
+1.0.10:
+    - 'Created table vage_calculator_payment'
+    - builder_table_create_vage_calculator_payment.php
+1.0.11:
+    - 'Updated table vage_calculator_debt'
+    - builder_table_update_vage_calculator_debt.php
+1.0.12:
+    - 'Drop table vage_calculator_payment'
+    - builder_table_delete_vage_calculator_payment.php
+1.0.13:
+    - 'Drop table vage_calculator_debt'
+    - builder_table_delete_vage_calculator_debt.php
+1.0.14:
+    - 'Created table vage_calculator_debt'
+    - builder_table_create_vage_calculator_debt.php
+1.0.15:
+    - 'Updated table vage_calculator_debt'
+    - builder_table_update_vage_calculator_debt_2.php
+1.0.16:
+    - 'Updated table vage_calculator_debt'
+    - builder_table_update_vage_calculator_debt_3.php

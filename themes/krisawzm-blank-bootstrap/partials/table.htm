@@ -1,0 +1,28 @@
+==
+use Vage\Calculator\Models\Debt;
+
+function onStart()
+{
+    $this['months'] = Debt::where('debt', '>', '0')->get();
+}
+==
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+    <p>Долги по ЗП по месяцам</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+  <tr>
+    <th>Месяц</th>
+    <th>Остались должны</th>
+  </tr>
+      {% for month in months %}
+      <tr>
+          <td>{{ month.month }}</td>
+          <td>{{ month.debt }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+</div>

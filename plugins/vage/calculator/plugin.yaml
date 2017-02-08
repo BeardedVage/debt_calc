@@ -1,0 +1,6 @@
+plugin:
+    name: 'vage.calculator::lang.plugin.name'
+    description: 'vage.calculator::lang.plugin.description'
+    author: Vage
+    icon: oc-icon-adjust
+    homepage: ''

@@ -1,0 +1,39 @@
+1486547872a:1:{s:8:"calc.htm";a:6:{s:8:"fileName";s:8:"calc.htm";s:7:"content";s:900:"==
+use Illuminate\Support\Facades\DB;
+
+function onStart()
+    {
+    $this['debt'] = DB::table('vage_calculator_debt')->where('debt', '>', 0)->sum('debt');
+    }
+==
+<form name="salary" data-request="MainComponent::onNewPayment" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input name="payment" type="text" class="form-control" placeholder="Введите оплату">
+                <span class="input-group-btn">
+                    <button id="test" class="btn btn-default" type="submit">Добавить оплату!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+</form>
+<div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>
+";s:5:"mtime";i:1486545521;s:6:"markup";s:726:"<form name="salary" data-request="MainComponent::onNewPayment" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input name="payment" type="text" class="form-control" placeholder="Введите оплату">
+                <span class="input-group-btn">
+                    <button id="test" class="btn btn-default" type="submit">Добавить оплату!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+</form>
+<div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>";s:4:"code";s:162:"use Illuminate\Support\Facades\DB;
+
+function onStart()
+    {
+    $this['debt'] = DB::table('vage_calculator_debt')->where('debt', '>', 0)->sum('debt');
+    }";s:17:"_PARSER_ERROR_INI";s:0:"";}}

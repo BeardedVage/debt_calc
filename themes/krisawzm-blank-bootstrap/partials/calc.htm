@@ -1,0 +1,21 @@
+==
+use Illuminate\Support\Facades\DB;
+
+function onStart()
+    {
+    $this['debt'] = DB::table('vage_calculator_debt')->where('debt', '>', 0)->sum('debt');
+    }
+==
+<form name="salary" data-request="MainComponent::onNewPayment" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input name="payment" type="text" class="form-control" placeholder="Введите оплату">
+                <span class="input-group-btn">
+                    <button id="test" class="btn btn-default" type="submit">Добавить оплату!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+</form>
+<div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>
