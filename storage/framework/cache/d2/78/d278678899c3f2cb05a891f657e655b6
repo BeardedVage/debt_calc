@@ -1,4 +1,4 @@
-1486639835a:1:{s:9:"table.htm";a:6:{s:8:"fileName";s:9:"table.htm";s:7:"content";s:997:"==
+1486657356a:1:{s:9:"table.htm";a:6:{s:8:"fileName";s:9:"table.htm";s:7:"content";s:1003:"==
 <?php
 use Vage\Calculator\Models\Debt;
 use RainLab\User\Facades\Auth;
@@ -17,7 +17,7 @@ function onStart()
   <li><a href="/payments">Выплаты</a></li>
   <li><a href="/settings">Настройки</a></li>
 </ul>
-<div class="panel panel-default">
+<div class="panel panel-default block">
   <!-- Default panel contents -->
   <div class="panel-body">
     <h3>Долги по ЗП по месяцам</h3>
@@ -38,12 +38,12 @@ function onStart()
       </tr>
       {% endfor %}
   </table>
-</div>";s:5:"mtime";i:1486637787;s:6:"markup";s:743:"<ul class="nav nav-tabs">
+</div>";s:5:"mtime";i:1486656752;s:6:"markup";s:749:"<ul class="nav nav-tabs">
   <li class="active"><a href="/">Долги</a></li>
   <li><a href="/payments">Выплаты</a></li>
   <li><a href="/settings">Настройки</a></li>
 </ul>
-<div class="panel panel-default">
+<div class="panel panel-default block">
   <!-- Default panel contents -->
   <div class="panel-body">
     <h3>Долги по ЗП по месяцам</h3>

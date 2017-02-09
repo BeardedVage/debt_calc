@@ -21,27 +21,29 @@ class __TwigTemplate_dd1c3ffdc27eea315d6bd6fe7a25d6ac64498d1dd2a26454d60c5817f6a
   <li><a href=\"/payments\">Выплаты</a></li>
   <li class=\"active\"><a href=\"/settings\">Настройки</a></li>
 </ul>
-<div class=\"panel container\">
-<form class=\"mb-3\" name=\"debt\" data-request=\"MainComponent::onNewDebt\" onsubmit=\"setTimeout(function () { window.location.reload(); }, 2)\">
-    <h4>Если у вас есть изначальный долг (не считая текущий месяц) - введите данный долг в поле:</h4>
-    <div class=\"row mb-3\">
-        <div class=\"col-lg-6\">
-            <div class=\"input-group\">
-                <input name=\"debt\" type=\"text\" class=\"form-control\" placeholder=\"Введите сумму долга\">
-                <span class=\"input-group-btn\">
+<div class=\"panel panel-default block\">
+    <div class=\"mr-b\">
+        <form name=\"debt\" data-request=\"MainComponent::onNewDebt\" onsubmit=\"setTimeout(function () { window.location.reload(); }, 2)\">
+            <h4>Если у вас есть изначальный долг (не считая текущий месяц) - введите данный долг в поле:</h4>
+            <div class=\"row\">
+                <div class=\"col-lg-6\">
+                    <div class=\"input-group\">
+                        <input name=\"debt\" type=\"text\" class=\"form-control\" placeholder=\"Введите сумму долга\">
+                        <span class=\"input-group-btn\">
                     <button class=\"btn btn-default\" type=\"submit\">Добавить долг</button>
                 </span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
-</form>
 <form name=\"salary\" data-request=\"MainComponent::onUpdateSalary\" onsubmit=\"setTimeout(function () { window.location.reload(); }, 2)\">
     <h4>Если хотите изменить вашу ЗП, введите новое ЗП в поле:</h4>
     <div class=\"row\">
         <div class=\"col-lg-6\">
             <div class=\"input-group\">
                 <input name=\"salary\" type=\"text\" class=\"form-control\" placeholder=\"Введите вашу ЗП\" value=";
-        // line 25
+        // line 27
         echo twig_escape_filter($this->env, ($context["surname"] ?? null), "html", null, true);
         echo ">
                 <span class=\"input-group-btn\">
@@ -67,7 +69,7 @@ class __TwigTemplate_dd1c3ffdc27eea315d6bd6fe7a25d6ac64498d1dd2a26454d60c5817f6a
 
     public function getDebugInfo()
     {
-        return array (  45 => 25,  19 => 1,);
+        return array (  47 => 27,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -85,20 +87,22 @@ class __TwigTemplate_dd1c3ffdc27eea315d6bd6fe7a25d6ac64498d1dd2a26454d60c5817f6a
   <li><a href=\"/payments\">Выплаты</a></li>
   <li class=\"active\"><a href=\"/settings\">Настройки</a></li>
 </ul>
-<div class=\"panel container\">
-<form class=\"mb-3\" name=\"debt\" data-request=\"MainComponent::onNewDebt\" onsubmit=\"setTimeout(function () { window.location.reload(); }, 2)\">
-    <h4>Если у вас есть изначальный долг (не считая текущий месяц) - введите данный долг в поле:</h4>
-    <div class=\"row mb-3\">
-        <div class=\"col-lg-6\">
-            <div class=\"input-group\">
-                <input name=\"debt\" type=\"text\" class=\"form-control\" placeholder=\"Введите сумму долга\">
-                <span class=\"input-group-btn\">
+<div class=\"panel panel-default block\">
+    <div class=\"mr-b\">
+        <form name=\"debt\" data-request=\"MainComponent::onNewDebt\" onsubmit=\"setTimeout(function () { window.location.reload(); }, 2)\">
+            <h4>Если у вас есть изначальный долг (не считая текущий месяц) - введите данный долг в поле:</h4>
+            <div class=\"row\">
+                <div class=\"col-lg-6\">
+                    <div class=\"input-group\">
+                        <input name=\"debt\" type=\"text\" class=\"form-control\" placeholder=\"Введите сумму долга\">
+                        <span class=\"input-group-btn\">
                     <button class=\"btn btn-default\" type=\"submit\">Добавить долг</button>
                 </span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
-</form>
 <form name=\"salary\" data-request=\"MainComponent::onUpdateSalary\" onsubmit=\"setTimeout(function () { window.location.reload(); }, 2)\">
     <h4>Если хотите изменить вашу ЗП, введите новое ЗП в поле:</h4>
     <div class=\"row\">

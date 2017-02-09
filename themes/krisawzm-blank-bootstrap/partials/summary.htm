@@ -14,11 +14,11 @@ function onStart()
 ?>
 ==
 {% if debt %}
-<div>
+<div class="alerts">
     <div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>
 </div>
 {% else %}
-<div>
+<div class="alerts">
     <div class="alert alert-success" role="alert">Долг равен нулю</div>
 </div>
 {% endif %}

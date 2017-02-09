@@ -1,5 +1,5 @@
 <?php 
-use Illuminate\Support\Facades\DB;use RainLab\User\Facades\Auth;class Cms589c5078e4c8f800322510_1483302260Class extends \Cms\Classes\PartialCode
+use Illuminate\Support\Facades\DB;use RainLab\User\Facades\Auth;class Cms589c95842dfb2761444811_1575608748Class extends \Cms\Classes\PartialCode
 {
 
 

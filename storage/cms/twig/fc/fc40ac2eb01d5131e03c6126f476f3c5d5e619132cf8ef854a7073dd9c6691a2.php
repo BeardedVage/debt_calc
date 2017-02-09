@@ -21,7 +21,7 @@ class __TwigTemplate_0f82b595598639244f954a0c8b1439764ce097694e88cd5d400c5f51a09
   <li class=\"active\"><a href=\"/payments\">Выплаты</a></li>
   <li><a href=\"/settings\">Настройки</a></li>
 </ul>
-<div class=\"panel panel-default\">
+<div class=\"panel panel-default block\">
   <!-- Default panel contents -->
   <div class=\"panel-body\">
     <h3>Выплаты по датам</h3>
@@ -89,7 +89,7 @@ class __TwigTemplate_0f82b595598639244f954a0c8b1439764ce097694e88cd5d400c5f51a09
   <li class=\"active\"><a href=\"/payments\">Выплаты</a></li>
   <li><a href=\"/settings\">Настройки</a></li>
 </ul>
-<div class=\"panel panel-default\">
+<div class=\"panel panel-default block\">
   <!-- Default panel contents -->
   <div class=\"panel-body\">
     <h3>Выплаты по датам</h3>

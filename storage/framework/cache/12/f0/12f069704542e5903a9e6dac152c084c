@@ -1,4 +1,4 @@
-1486639419a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1157:"description = "Default layout"
+1486657175a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1268:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -9,6 +9,7 @@
         <link href="{{ [
             'assets/less/app.less'
         ]|theme }}" rel="stylesheet">
+        <link href="{{ ['assets/css/main.css']|theme }}" rel="stylesheet">
     </head>
     <body>
         {% page %}
@@ -36,8 +37,7 @@
 
         {% scripts %}
     </body>
-</html>
-";s:5:"mtime";i:1486378760;s:6:"markup";s:1122:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1486656572;s:6:"markup";s:1234:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -46,6 +46,7 @@
         <link href="{{ [
             'assets/less/app.less'
         ]|theme }}" rel="stylesheet">
+        <link href="{{ ['assets/css/main.css']|theme }}" rel="stylesheet">
     </head>
     <body>
         {% page %}

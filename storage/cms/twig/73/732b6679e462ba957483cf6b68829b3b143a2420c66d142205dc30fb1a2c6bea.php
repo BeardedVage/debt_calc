@@ -33,24 +33,28 @@ class __TwigTemplate_a381faf1dd215eb69b4c42c63e8720ccd0c865e4cb8c1cbd437ae2935ee
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter(array(0 => "assets/less/app.less"));
         // line 9
         echo "\" rel=\"stylesheet\">
+        <link href=\"";
+        // line 10
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter(array(0 => "assets/css/main.css"));
+        echo "\" rel=\"stylesheet\">
     </head>
     <body>
         ";
-        // line 12
-        echo $this->env->getExtension('CMS')->pageFunction();
         // line 13
+        echo $this->env->getExtension('CMS')->pageFunction();
+        // line 14
         echo "
         <script src=\"";
-        // line 14
+        // line 15
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter(array(0 => "assets/js/jquery.js", 1 => "assets/vendor/bootstrap/js/transition.js", 2 => "assets/vendor/bootstrap/js/alert.js", 3 => "assets/vendor/bootstrap/js/button.js", 4 => "assets/vendor/bootstrap/js/carousel.js", 5 => "assets/vendor/bootstrap/js/collapse.js", 6 => "assets/vendor/bootstrap/js/dropdown.js", 7 => "assets/vendor/bootstrap/js/modal.js", 8 => "assets/vendor/bootstrap/js/tooltip.js", 9 => "assets/vendor/bootstrap/js/popover.js", 10 => "assets/vendor/bootstrap/js/scrollspy.js", 11 => "assets/vendor/bootstrap/js/tab.js", 12 => "assets/vendor/bootstrap/js/affix.js", 13 => "@framework", 14 => "@framework.extras", 15 => "assets/js/app.js"));
-        // line 33
+        // line 34
         echo "\"></script>
 
         ";
-        // line 35
+        // line 36
         echo $this->env->getExtension('CMS')->assetsFunction('js');
         echo $this->env->getExtension('CMS')->displayBlock('scripts');
-        // line 36
+        // line 37
         echo "    </body>
 </html>";
     }
@@ -67,7 +71,7 @@ class __TwigTemplate_a381faf1dd215eb69b4c42c63e8720ccd0c865e4cb8c1cbd437ae2935ee
 
     public function getDebugInfo()
     {
-        return array (  54 => 36,  51 => 35,  47 => 33,  45 => 14,  42 => 13,  40 => 12,  35 => 9,  32 => 7,  29 => 6,  25 => 5,  19 => 1,);
+        return array (  58 => 37,  55 => 36,  51 => 34,  49 => 15,  46 => 14,  44 => 13,  38 => 10,  35 => 9,  32 => 7,  29 => 6,  25 => 5,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -89,6 +93,7 @@ class __TwigTemplate_a381faf1dd215eb69b4c42c63e8720ccd0c865e4cb8c1cbd437ae2935ee
         <link href=\"{{ [
             'assets/less/app.less'
         ]|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ ['assets/css/main.css']|theme }}\" rel=\"stylesheet\">
     </head>
     <body>
         {% page %}

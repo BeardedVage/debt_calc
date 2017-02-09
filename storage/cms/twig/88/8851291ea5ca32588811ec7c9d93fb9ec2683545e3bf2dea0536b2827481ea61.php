@@ -21,7 +21,7 @@ class __TwigTemplate_d1340b9a62c953148ba580352fcaedd14cdaec9e6403dd9824d3c03f193
   <li><a href=\"/payments\">Выплаты</a></li>
   <li><a href=\"/settings\">Настройки</a></li>
 </ul>
-<div class=\"panel panel-default\">
+<div class=\"panel panel-default block\">
   <!-- Default panel contents -->
   <div class=\"panel-body\">
     <h3>Долги по ЗП по месяцам</h3>
@@ -94,7 +94,7 @@ class __TwigTemplate_d1340b9a62c953148ba580352fcaedd14cdaec9e6403dd9824d3c03f193
   <li><a href=\"/payments\">Выплаты</a></li>
   <li><a href=\"/settings\">Настройки</a></li>
 </ul>
-<div class=\"panel panel-default\">
+<div class=\"panel panel-default block\">
   <!-- Default panel contents -->
   <div class=\"panel-body\">
     <h3>Долги по ЗП по месяцам</h3>

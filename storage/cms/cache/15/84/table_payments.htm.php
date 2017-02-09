@@ -1,5 +1,5 @@
 <?php 
-use Vage\Calculator\Models\Payments;use RainLab\User\Facades\Auth;class Cms589c48400ee79753194070_1172082903Class extends \Cms\Classes\PartialCode
+use Vage\Calculator\Models\Payments;use RainLab\User\Facades\Auth;class Cms589c950667dac611884786_1559344881Class extends \Cms\Classes\PartialCode
 {
 
 

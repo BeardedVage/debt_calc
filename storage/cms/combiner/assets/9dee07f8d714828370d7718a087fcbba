@@ -9,7 +9,3 @@
 .block {
     padding: 15px;
 }
-
-.mr-b {
-    margin-bottom: 40px;
-}

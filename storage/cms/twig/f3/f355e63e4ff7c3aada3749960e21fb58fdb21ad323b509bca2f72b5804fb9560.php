@@ -18,7 +18,7 @@ class __TwigTemplate_53162c8257a26e20a93718f16f0a6a0ba685532c9382ea221ed20f73e4b
         // line 1
         if (($context["debt"] ?? null)) {
             // line 2
-            echo "<div>
+            echo "<div class=\"alerts\">
     <div class=\"alert alert-warning\" role=\"alert\">Общий долг равен = ";
             // line 3
             echo twig_escape_filter($this->env, ($context["debt"] ?? null), "html", null, true);
@@ -27,7 +27,7 @@ class __TwigTemplate_53162c8257a26e20a93718f16f0a6a0ba685532c9382ea221ed20f73e4b
 ";
         } else {
             // line 6
-            echo "<div>
+            echo "<div class=\"alerts\">
     <div class=\"alert alert-success\" role=\"alert\">Долг равен нулю</div>
 </div>
 ";
@@ -60,11 +60,11 @@ class __TwigTemplate_53162c8257a26e20a93718f16f0a6a0ba685532c9382ea221ed20f73e4b
     public function getSourceContext()
     {
         return new Twig_Source("{% if debt %}
-<div>
+<div class=\"alerts\">
     <div class=\"alert alert-warning\" role=\"alert\">Общий долг равен = {{ debt }} \$</div>
 </div>
 {% else %}
-<div>
+<div class=\"alerts\">
     <div class=\"alert alert-success\" role=\"alert\">Долг равен нулю</div>
 </div>
 {% endif %}", "/var/www/calc/themes/krisawzm-blank-bootstrap/partials/summary.htm", "");

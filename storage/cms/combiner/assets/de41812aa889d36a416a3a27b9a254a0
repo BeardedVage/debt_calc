@@ -1,0 +1,7 @@
+.body {
+    width: 75%;
+}
+
+.alerts {
+    margin: 10px 0;   
+}

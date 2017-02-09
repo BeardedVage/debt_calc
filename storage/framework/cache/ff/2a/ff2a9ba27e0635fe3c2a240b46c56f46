@@ -1,4 +1,4 @@
-1486639860a:1:{s:18:"table_payments.htm";a:6:{s:8:"fileName";s:18:"table_payments.htm";s:7:"content";s:859:"==
+1486657374a:1:{s:18:"table_payments.htm";a:6:{s:8:"fileName";s:18:"table_payments.htm";s:7:"content";s:865:"==
 <?php
 use Vage\Calculator\Models\Payments;
 use RainLab\User\Facades\Auth;
@@ -16,7 +16,7 @@ function onStart()
   <li class="active"><a href="/payments">Выплаты</a></li>
   <li><a href="/settings">Настройки</a></li>
 </ul>
-<div class="panel panel-default">
+<div class="panel panel-default block">
   <!-- Default panel contents -->
   <div class="panel-body">
     <h3>Выплаты по датам</h3>
@@ -35,12 +35,12 @@ function onStart()
       </tr>
       {% endfor %}
   </table>
-</div>";s:5:"mtime";i:1486637117;s:6:"markup";s:632:"<ul class="nav nav-tabs">
+</div>";s:5:"mtime";i:1486656767;s:6:"markup";s:638:"<ul class="nav nav-tabs">
   <li><a href="/">Долги</a></li>
   <li class="active"><a href="/payments">Выплаты</a></li>
   <li><a href="/settings">Настройки</a></li>
 </ul>
-<div class="panel panel-default">
+<div class="panel panel-default block">
   <!-- Default panel contents -->
   <div class="panel-body">
     <h3>Выплаты по датам</h3>
