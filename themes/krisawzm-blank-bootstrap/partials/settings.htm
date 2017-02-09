@@ -1,0 +1,46 @@
+==
+<?php
+use Illuminate\Support\Facades\DB;
+use RainLab\User\Facades\Auth;
+
+function onStart()
+    {
+    $user = Auth::getUser();
+    $this['surname'] = $user->surname;
+    }
+?>
+==
+<ul class="nav nav-tabs">
+  <li><a href="/">Долги</a></li>
+  <li><a href="/payments">Выплаты</a></li>
+  <li class="active"><a href="/settings">Настройки</a></li>
+</ul>
+<div class="panel container">
+<form class="mb-3" name="debt" data-request="MainComponent::onNewDebt" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
+    <h4>Если у вас есть изначальный долг (не считая текущий месяц) - введите данный долг в поле:</h4>
+    <div class="row mb-3">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input name="debt" type="text" class="form-control" placeholder="Введите сумму долга">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Добавить долг</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</form>
+<form name="salary" data-request="MainComponent::onUpdateSalary" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
+    <h4>Если хотите изменить вашу ЗП, введите новое ЗП в поле:</h4>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input name="salary" type="text" class="form-control" placeholder="Введите вашу ЗП" value={{ surname }}>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Обновить зарплату</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <p></p>
+</form>
+</div>

@@ -1,52 +1,77 @@
-1486547872a:1:{s:9:"table.htm";a:6:{s:8:"fileName";s:9:"table.htm";s:7:"content";s:594:"==
+1486639835a:1:{s:9:"table.htm";a:6:{s:8:"fileName";s:9:"table.htm";s:7:"content";s:997:"==
+<?php
 use Vage\Calculator\Models\Debt;
+use RainLab\User\Facades\Auth;
 
 function onStart()
 {
-    $this['months'] = Debt::where('debt', '>', '0')->get();
+    $user = Auth::getUser();
+    $this['months'] = Debt::where('debt', '>', '0')
+        ->where('uid', '=', $user->id)
+        ->get();
 }
+?>
 ==
+<ul class="nav nav-tabs">
+  <li class="active"><a href="/">Долги</a></li>
+  <li><a href="/payments">Выплаты</a></li>
+  <li><a href="/settings">Настройки</a></li>
+</ul>
 <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-body">
-    <p>Долги по ЗП по месяцам</p>
+    <h3>Долги по ЗП по месяцам</h3>
   </div>
 
   <!-- Table -->
   <table class="table">
-  <tr>
-    <th>Месяц</th>
-    <th>Остались должны</th>
-  </tr>
+    <tr>
+      <th>Месяц</th>
+      <th>Остались должны</th>
+      <th>ЗП за месяц</th>
+    </tr>
       {% for month in months %}
       <tr>
           <td>{{ month.month }}</td>
           <td>{{ month.debt }}</td>
+          <td>{{ month.salary }}</td>
       </tr>
       {% endfor %}
   </table>
-</div>";s:5:"mtime";i:1486477705;s:6:"markup";s:463:"<div class="panel panel-default">
+</div>";s:5:"mtime";i:1486637787;s:6:"markup";s:743:"<ul class="nav nav-tabs">
+  <li class="active"><a href="/">Долги</a></li>
+  <li><a href="/payments">Выплаты</a></li>
+  <li><a href="/settings">Настройки</a></li>
+</ul>
+<div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-body">
-    <p>Долги по ЗП по месяцам</p>
+    <h3>Долги по ЗП по месяцам</h3>
   </div>
 
   <!-- Table -->
   <table class="table">
-  <tr>
-    <th>Месяц</th>
-    <th>Остались должны</th>
-  </tr>
+    <tr>
+      <th>Месяц</th>
+      <th>Остались должны</th>
+      <th>ЗП за месяц</th>
+    </tr>
       {% for month in months %}
       <tr>
           <td>{{ month.month }}</td>
           <td>{{ month.debt }}</td>
+          <td>{{ month.salary }}</td>
       </tr>
       {% endfor %}
   </table>
-</div>";s:4:"code";s:121:"use Vage\Calculator\Models\Debt;
+</div>";s:4:"code";s:236:"
+use Vage\Calculator\Models\Debt;
+use RainLab\User\Facades\Auth;
 
 function onStart()
 {
-    $this['months'] = Debt::where('debt', '>', '0')->get();
-}";s:17:"_PARSER_ERROR_INI";s:0:"";}}
+    $user = Auth::getUser();
+    $this['months'] = Debt::where('debt', '>', '0')
+        ->where('uid', '=', $user->id)
+        ->get();
+}";s:17:"_PARSER_ERROR_INI";s:0:"";}}

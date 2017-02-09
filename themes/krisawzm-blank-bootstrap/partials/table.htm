@@ -1,27 +1,40 @@
 ==
+<?php
 use Vage\Calculator\Models\Debt;
+use RainLab\User\Facades\Auth;
 
 function onStart()
 {
-    $this['months'] = Debt::where('debt', '>', '0')->get();
+    $user = Auth::getUser();
+    $this['months'] = Debt::where('debt', '>', '0')
+        ->where('uid', '=', $user->id)
+        ->get();
 }
+?>
 ==
+<ul class="nav nav-tabs">
+  <li class="active"><a href="/">Долги</a></li>
+  <li><a href="/payments">Выплаты</a></li>
+  <li><a href="/settings">Настройки</a></li>
+</ul>
 <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-body">
-    <p>Долги по ЗП по месяцам</p>
+    <h3>Долги по ЗП по месяцам</h3>
   </div>
 
   <!-- Table -->
   <table class="table">
-  <tr>
-    <th>Месяц</th>
-    <th>Остались должны</th>
-  </tr>
+    <tr>
+      <th>Месяц</th>
+      <th>Остались должны</th>
+      <th>ЗП за месяц</th>
+    </tr>
       {% for month in months %}
       <tr>
           <td>{{ month.month }}</td>
           <td>{{ month.debt }}</td>
+          <td>{{ month.salary }}</td>
       </tr>
       {% endfor %}
   </table>

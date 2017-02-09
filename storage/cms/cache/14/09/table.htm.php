@@ -1,9 +1,14 @@
 <?php 
-use Vage\Calculator\Models\Debt;class Cms5899d984c2c23321196095_450105576Class extends \Cms\Classes\PartialCode
+use Vage\Calculator\Models\Debt;use RainLab\User\Facades\Auth;class Cms589c4add7efbc306799693_1631879150Class extends \Cms\Classes\PartialCode
 {
+
+
 
 public function onStart()
 {
-    $this['months'] = Debt::where('debt', '>', '0')->get();
+    $user = Auth::getUser();
+    $this['months'] = Debt::where('debt', '>', '0')
+        ->where('uid', '=', $user->id)
+        ->get();
 }
 }

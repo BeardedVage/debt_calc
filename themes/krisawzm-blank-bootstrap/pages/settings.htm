@@ -1,0 +1,26 @@
+title = "Settings"
+url = "/settings"
+layout = "default"
+is_hidden = 0
+
+[MainComponent]
+
+[session]
+security = "all"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+==
+{% if user %}
+<div class="container">
+    {% partial "calc" %}
+    {% partial "summary" %}
+    {% partial "settings" %}
+    
+</div>
+{% else %}
+<div class="container">
+    {% component 'account' %}
+</div>
+{% endif %}

@@ -1,0 +1,45 @@
+title = "Debt Calculator"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[MainComponent]
+
+[session]
+security = "all"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+==
+<?php
+function onSubmit()
+{
+    $data = post();
+
+    $rules = [
+        'payment' => 'required|numeric',
+    ];
+
+    $validation = Validator::make($data, $rules);
+
+    if ($validation->fails()) {
+        throw new ValidationException($validation);
+    }
+
+    Flash::success('Jobs done!');
+}
+?>
+==
+{% if user %}
+<div class="container">
+    {% partial "calc" %}
+    {% partial "summary" %}
+    {% partial "table" %}
+    
+</div>
+{% else %}
+<div class="container">
+    {% component 'account' %}
+</div>
+{% endif %}

@@ -1,37 +1,44 @@
-1486547872a:1:{s:8:"calc.htm";a:6:{s:8:"fileName";s:8:"calc.htm";s:7:"content";s:900:"==
+1486639760a:1:{s:8:"calc.htm";a:6:{s:8:"fileName";s:8:"calc.htm";s:7:"content";s:949:"==
+<?php
 use Illuminate\Support\Facades\DB;
 
 function onStart()
     {
     $this['debt'] = DB::table('vage_calculator_debt')->where('debt', '>', 0)->sum('debt');
     }
+?>
 ==
+<ul class="nav nav-pills">
+    <li class="pull-right">Hi, {{ user.name }}</li>
+</ul>
 <form name="salary" data-request="MainComponent::onNewPayment" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
     <div class="row">
         <div class="col-lg-6">
             <div class="input-group">
                 <input name="payment" type="text" class="form-control" placeholder="Введите оплату">
                 <span class="input-group-btn">
-                    <button id="test" class="btn btn-default" type="submit">Добавить оплату!</button>
+                    <button class="btn btn-default" type="submit">Добавить оплату!</button>
                 </span>
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
+            </div>
+        </div>
+        <a class="btn pull-right" data-request="onLogout" data-request-data="redirect: '/'">Sign out</a>
     </div>
-</form>
-<div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>
-";s:5:"mtime";i:1486545521;s:6:"markup";s:726:"<form name="salary" data-request="MainComponent::onNewPayment" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
+</form>";s:5:"mtime";i:1486636170;s:6:"markup";s:771:"<ul class="nav nav-pills">
+    <li class="pull-right">Hi, {{ user.name }}</li>
+</ul>
+<form name="salary" data-request="MainComponent::onNewPayment" onsubmit="setTimeout(function () { window.location.reload(); }, 2)">
     <div class="row">
         <div class="col-lg-6">
             <div class="input-group">
                 <input name="payment" type="text" class="form-control" placeholder="Введите оплату">
                 <span class="input-group-btn">
-                    <button id="test" class="btn btn-default" type="submit">Добавить оплату!</button>
+                    <button class="btn btn-default" type="submit">Добавить оплату!</button>
                 </span>
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
+            </div>
+        </div>
+        <a class="btn pull-right" data-request="onLogout" data-request-data="redirect: '/'">Sign out</a>
     </div>
-</form>
-<div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>";s:4:"code";s:162:"use Illuminate\Support\Facades\DB;
+</form>";s:4:"code";s:162:"use Illuminate\Support\Facades\DB;
 
 function onStart()
     {

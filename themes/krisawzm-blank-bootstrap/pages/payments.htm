@@ -1,0 +1,26 @@
+title = "Payments"
+url = "/payments"
+layout = "default"
+is_hidden = 0
+
+[MainComponent]
+
+[session]
+security = "all"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+==
+{% if user %}
+<div class="container">
+    {% partial "calc" %}
+    {% partial "summary" %}
+    {% partial "table_payments" %}
+    
+</div>
+{% else %}
+<div class="container">
+    {% component 'account' %}
+</div>
+{% endif %}

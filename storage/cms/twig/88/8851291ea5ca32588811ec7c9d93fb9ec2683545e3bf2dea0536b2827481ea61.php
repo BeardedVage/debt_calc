@@ -16,32 +16,42 @@ class __TwigTemplate_d1340b9a62c953148ba580352fcaedd14cdaec9e6403dd9824d3c03f193
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"panel panel-default\">
+        echo "<ul class=\"nav nav-tabs\">
+  <li class=\"active\"><a href=\"/\">Долги</a></li>
+  <li><a href=\"/payments\">Выплаты</a></li>
+  <li><a href=\"/settings\">Настройки</a></li>
+</ul>
+<div class=\"panel panel-default\">
   <!-- Default panel contents -->
   <div class=\"panel-body\">
-    <p>Долги по ЗП по месяцам</p>
+    <h3>Долги по ЗП по месяцам</h3>
   </div>
 
   <!-- Table -->
   <table class=\"table\">
-  <tr>
-    <th>Месяц</th>
-    <th>Остались должны</th>
-  </tr>
+    <tr>
+      <th>Месяц</th>
+      <th>Остались должны</th>
+      <th>ЗП за месяц</th>
+    </tr>
       ";
-        // line 13
+        // line 19
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["months"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["month"]) {
-            // line 14
+            // line 20
             echo "      <tr>
           <td>";
-            // line 15
+            // line 21
             echo twig_escape_filter($this->env, $this->getAttribute($context["month"], "month", array()), "html", null, true);
             echo "</td>
           <td>";
-            // line 16
+            // line 22
             echo twig_escape_filter($this->env, $this->getAttribute($context["month"], "debt", array()), "html", null, true);
+            echo "</td>
+          <td>";
+            // line 23
+            echo twig_escape_filter($this->env, $this->getAttribute($context["month"], "salary", array()), "html", null, true);
             echo "</td>
       </tr>
       ";
@@ -49,7 +59,7 @@ class __TwigTemplate_d1340b9a62c953148ba580352fcaedd14cdaec9e6403dd9824d3c03f193
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['month'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
+        // line 26
         echo "  </table>
 </div>";
     }
@@ -66,7 +76,7 @@ class __TwigTemplate_d1340b9a62c953148ba580352fcaedd14cdaec9e6403dd9824d3c03f193
 
     public function getDebugInfo()
     {
-        return array (  53 => 19,  44 => 16,  40 => 15,  37 => 14,  33 => 13,  19 => 1,);
+        return array (  63 => 26,  54 => 23,  50 => 22,  46 => 21,  43 => 20,  39 => 19,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -79,22 +89,29 @@ class __TwigTemplate_d1340b9a62c953148ba580352fcaedd14cdaec9e6403dd9824d3c03f193
 
     public function getSourceContext()
     {
-        return new Twig_Source("<div class=\"panel panel-default\">
+        return new Twig_Source("<ul class=\"nav nav-tabs\">
+  <li class=\"active\"><a href=\"/\">Долги</a></li>
+  <li><a href=\"/payments\">Выплаты</a></li>
+  <li><a href=\"/settings\">Настройки</a></li>
+</ul>
+<div class=\"panel panel-default\">
   <!-- Default panel contents -->
   <div class=\"panel-body\">
-    <p>Долги по ЗП по месяцам</p>
+    <h3>Долги по ЗП по месяцам</h3>
   </div>
 
   <!-- Table -->
   <table class=\"table\">
-  <tr>
-    <th>Месяц</th>
-    <th>Остались должны</th>
-  </tr>
+    <tr>
+      <th>Месяц</th>
+      <th>Остались должны</th>
+      <th>ЗП за месяц</th>
+    </tr>
       {% for month in months %}
       <tr>
           <td>{{ month.month }}</td>
           <td>{{ month.debt }}</td>
+          <td>{{ month.salary }}</td>
       </tr>
       {% endfor %}
   </table>

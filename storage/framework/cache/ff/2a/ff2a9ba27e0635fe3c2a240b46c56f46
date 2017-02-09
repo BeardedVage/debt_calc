@@ -1,0 +1,71 @@
+1486639860a:1:{s:18:"table_payments.htm";a:6:{s:8:"fileName";s:18:"table_payments.htm";s:7:"content";s:859:"==
+<?php
+use Vage\Calculator\Models\Payments;
+use RainLab\User\Facades\Auth;
+
+function onStart()
+{
+    $user = Auth::getUser();
+    $this['months'] = Payments::where('uid', '=', $user->id)
+        ->get();
+}
+?>
+==
+<ul class="nav nav-tabs">
+  <li><a href="/">Долги</a></li>
+  <li class="active"><a href="/payments">Выплаты</a></li>
+  <li><a href="/settings">Настройки</a></li>
+</ul>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+    <h3>Выплаты по датам</h3>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+  <tr>
+    <th>Дата</th>
+    <th>Платёж</th>
+  </tr>
+      {% for month in months %}
+      <tr>
+          <td>{{ month.added_at }}</td>
+          <td>{{ month.sum }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+</div>";s:5:"mtime";i:1486637117;s:6:"markup";s:632:"<ul class="nav nav-tabs">
+  <li><a href="/">Долги</a></li>
+  <li class="active"><a href="/payments">Выплаты</a></li>
+  <li><a href="/settings">Настройки</a></li>
+</ul>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+    <h3>Выплаты по датам</h3>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+  <tr>
+    <th>Дата</th>
+    <th>Платёж</th>
+  </tr>
+      {% for month in months %}
+      <tr>
+          <td>{{ month.added_at }}</td>
+          <td>{{ month.sum }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+</div>";s:4:"code";s:209:"
+use Vage\Calculator\Models\Payments;
+use RainLab\User\Facades\Auth;
+
+function onStart()
+{
+    $user = Auth::getUser();
+    $this['months'] = Payments::where('uid', '=', $user->id)
+        ->get();
+}";s:17:"_PARSER_ERROR_INI";s:0:"";}}

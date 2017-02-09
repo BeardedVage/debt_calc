@@ -8387,7 +8387,6 @@ button.close {
  * Should be removed.
  */
 body {
-  text-align: center;
   background-color: #f9f9f9;
 }
 body > img {

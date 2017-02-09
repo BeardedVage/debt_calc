@@ -25,5 +25,5 @@ class Debt extends Model
      * @var string The database table used by the model.
      */
     public $table = 'vage_calculator_debt';
-    public $fillable = ['salary', 'status', 'month', 'debt'];
+    public $fillable = ['salary', 'month', 'debt', 'uid'];
 }

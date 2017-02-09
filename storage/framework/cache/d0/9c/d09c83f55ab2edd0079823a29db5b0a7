@@ -1,0 +1,42 @@
+1486639760a:1:{s:11:"summary.htm";a:6:{s:8:"fileName";s:11:"summary.htm";s:7:"content";s:557:"==
+<?php
+use Illuminate\Support\Facades\DB;
+use RainLab\User\Facades\Auth;
+
+function onStart()
+    {
+    $user = Auth::getUser();
+    $this['debt'] = DB::table('vage_calculator_debt')
+        ->where('debt', '>', 0)
+        ->where('uid', '=', $user->id)
+        ->sum('debt');
+    }
+?>
+==
+{% if debt %}
+<div>
+    <div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>
+</div>
+{% else %}
+<div>
+    <div class="alert alert-success" role="alert">Долг равен нулю</div>
+</div>
+{% endif %}";s:5:"mtime";i:1486628800;s:6:"markup";s:257:"{% if debt %}
+<div>
+    <div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>
+</div>
+{% else %}
+<div>
+    <div class="alert alert-success" role="alert">Долг равен нулю</div>
+</div>
+{% endif %}";s:4:"code";s:284:"use Illuminate\Support\Facades\DB;
+use RainLab\User\Facades\Auth;
+
+function onStart()
+    {
+    $user = Auth::getUser();
+    $this['debt'] = DB::table('vage_calculator_debt')
+        ->where('debt', '>', 0)
+        ->where('uid', '=', $user->id)
+        ->sum('debt');
+    }";s:17:"_PARSER_ERROR_INI";s:0:"";}}

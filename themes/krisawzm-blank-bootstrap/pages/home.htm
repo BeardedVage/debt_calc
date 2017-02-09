@@ -1,9 +1,13 @@
 title = "Salary Calculator"
-url = "/"
+url = "/debt"
 layout = "default"
 is_hidden = 0
 
 [MainComponent]
+
+[session]
+security = "user"
+redirect = "auth"
 ==
 <?php
 function onSubmit()
@@ -26,5 +30,6 @@ function onSubmit()
 ==
 <div class="container">
  {% partial "calc" %}
+ {% partial "summary" %}
  {% partial "table" %}
 </div>

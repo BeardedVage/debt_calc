@@ -1,0 +1,24 @@
+==
+<?php
+use Illuminate\Support\Facades\DB;
+use RainLab\User\Facades\Auth;
+
+function onStart()
+    {
+    $user = Auth::getUser();
+    $this['debt'] = DB::table('vage_calculator_debt')
+        ->where('debt', '>', 0)
+        ->where('uid', '=', $user->id)
+        ->sum('debt');
+    }
+?>
+==
+{% if debt %}
+<div>
+    <div class="alert alert-warning" role="alert">Общий долг равен = {{ debt }} $</div>
+</div>
+{% else %}
+<div>
+    <div class="alert alert-success" role="alert">Долг равен нулю</div>
+</div>
+{% endif %}

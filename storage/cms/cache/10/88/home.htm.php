@@ -1,5 +1,5 @@
 <?php 
-class Cms589882c9a775c036396316_2394945737Class extends \Cms\Classes\PageCode
+class Cms589b24ca76bc2228735950_308125186Class extends \Cms\Classes\PageCode
 {
 public function onSubmit()
 {

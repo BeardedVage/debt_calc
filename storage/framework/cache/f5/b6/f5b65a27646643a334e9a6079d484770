@@ -1,0 +1,37 @@
+1486639419a:1:{s:12:"settings.htm";a:12:{s:8:"fileName";s:12:"settings.htm";s:7:"content";s:390:"title = "Settings"
+url = "/settings"
+layout = "default"
+is_hidden = 0
+
+[MainComponent]
+
+[session]
+security = "all"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+==
+{% if user %}
+<div class="container">
+    {% partial "calc" %}
+    {% partial "summary" %}
+    {% partial "settings" %}
+    
+</div>
+{% else %}
+<div class="container">
+    {% component 'account' %}
+</div>
+{% endif %}";s:5:"mtime";i:1486636349;s:6:"markup";s:226:"{% if user %}
+<div class="container">
+    {% partial "calc" %}
+    {% partial "summary" %}
+    {% partial "settings" %}
+    
+</div>
+{% else %}
+<div class="container">
+    {% component 'account' %}
+</div>
+{% endif %}";s:4:"code";N;s:5:"title";s:8:"Settings";s:3:"url";s:9:"/settings";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:13:"MainComponent";a:0:{}s:7:"session";a:1:{s:8:"security";s:3:"all";}s:7:"account";a:2:{s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}}}

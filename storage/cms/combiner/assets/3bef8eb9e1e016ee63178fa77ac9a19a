@@ -1,0 +1,8 @@
+/*
+ * Created by the Blank scaffold.
+ * Should be removed.
+ */
+
+$(function()
+{
+});
